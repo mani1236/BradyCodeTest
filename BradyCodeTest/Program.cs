@@ -26,10 +26,10 @@ namespace BradyCodeTest
                 }
                 else
                 {
-                    Console.WriteLine(string.Format("Files Not Available in the directory : {0}", ConfigHelper.GenerationReportInputFilePath));
+                    Console.WriteLine(string.Format("Files not available in the directory : {0}", ConfigHelper.GenerationReportInputFilePath));
                 }
 
-                Console.WriteLine(string.Format("Application Listinging for the files : {0}", ConfigHelper.GenerationReportInputFilePath));
+                Console.WriteLine(string.Format("Application listinging for the files : {0}", ConfigHelper.GenerationReportInputFilePath));
 
                 using var watcher = new FileSystemWatcher(ConfigHelper.GenerationReportInputFilePath);
                 watcher.NotifyFilter = NotifyFilters.Attributes
@@ -51,11 +51,11 @@ namespace BradyCodeTest
 
             catch (Exception ex)
             {
-                Console.WriteLine(string.Format("Exception occured while Processing File {0}", ex.Message));
+                Console.WriteLine(string.Format("Exception occured while processing file {0}", ex.Message));
             }
             finally
             {
-                Console.WriteLine("Click Any Key to Exit...");
+                Console.WriteLine("Press enter to exit.");
                 Console.ReadLine();
             }
         }
@@ -81,14 +81,14 @@ namespace BradyCodeTest
         {
             Console.WriteLine("---------------- ");
             var fileName = Path.GetFileNameWithoutExtension(filePath);
-            Console.WriteLine($"Started Processing File : {fileName}");
+            Console.WriteLine($"Started processing file : {fileName}");
             GenerationReportInputModel GenerationReport = XMLHelper.ParseXML(filePath);
             var GenerationOutput = new OutputGenrationService(GenerationReport);
             XMLHelper.CreateXML(GenerationOutput.generationOutput(), fileName);
-            Console.WriteLine("Completed File Process.");         
-            Console.WriteLine($"Moving a procssed file into Proccssed into { filePath} ");
+            Console.WriteLine("Completed file process.");         
+            Console.WriteLine($"Moving a procssed file into proccssed into { filePath} ");
             XMLHelper.MoveFileAfterProcess(filePath, fileName);
-            Console.WriteLine("Moved Proccesed file.");
+            Console.WriteLine("Moved proccesed file.");
             Console.WriteLine("---------------- ");
         }
 
