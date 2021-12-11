@@ -16,7 +16,7 @@ namespace BradyCodeTest
         {
             try
             {
-                Console.WriteLine("Brady file proccessing systm started");
+                Console.WriteLine("Brady file proccessing systm started.");
                 Console.WriteLine("------------------");
                 ConfigHelper.GetConfigFile();
                 var files = Directory.GetFiles(ConfigHelper.GenerationReportInputFilePath);
@@ -51,7 +51,7 @@ namespace BradyCodeTest
 
             catch (Exception ex)
             {
-                Console.WriteLine(string.Format("Exception occured {0}", ex.Message));
+                Console.WriteLine(string.Format("Exception occured while Processing File {0}", ex.Message));
             }
             finally
             {
@@ -72,7 +72,7 @@ namespace BradyCodeTest
 
             catch (Exception ex)
             {
-                Console.WriteLine($"The file was not proccessed due to incorrect format or data: {e.FullPath}");
+               Console.WriteLine(string.Format("The file was not proccessed due to incorrect format or data : {0}", ex.Message));
             }
                        
         }
@@ -85,10 +85,10 @@ namespace BradyCodeTest
             GenerationReportInputModel GenerationReport = XMLHelper.ParseXML(filePath);
             var GenerationOutput = new OutputGenrationService(GenerationReport);
             XMLHelper.CreateXML(GenerationOutput.generationOutput(), fileName);
-            Console.WriteLine("Completed File Process ");         
+            Console.WriteLine("Completed File Process.");         
             Console.WriteLine($"Moving a procssed file into Proccssed into { filePath} ");
             XMLHelper.MoveFileAfterProcess(filePath, fileName);
-            Console.WriteLine($"Moved Proccesed file");
+            Console.WriteLine("Moved Proccesed file.");
             Console.WriteLine("---------------- ");
         }
 
