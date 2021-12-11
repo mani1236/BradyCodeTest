@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31410.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BradyCodeTest", "BradyCodeTest\BradyCodeTest.csproj", "{4E02D2B3-9CCB-49A4-BBC1-71C0DC8B5AA2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BradyCodeTest.UnitTest", "BradyCodeTest.UnitTest\BradyCodeTest.UnitTest.csproj", "{07E1E443-3FFA-4B85-8281-3B2C02C7C7D3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4E02D2B3-9CCB-49A4-BBC1-71C0DC8B5AA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E02D2B3-9CCB-49A4-BBC1-71C0DC8B5AA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E02D2B3-9CCB-49A4-BBC1-71C0DC8B5AA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E02D2B3-9CCB-49A4-BBC1-71C0DC8B5AA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07E1E443-3FFA-4B85-8281-3B2C02C7C7D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07E1E443-3FFA-4B85-8281-3B2C02C7C7D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07E1E443-3FFA-4B85-8281-3B2C02C7C7D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07E1E443-3FFA-4B85-8281-3B2C02C7C7D3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C8402BB2-6E0E-476E-9B26-45676092DAF4}
+	EndGlobalSection
+EndGlobal
